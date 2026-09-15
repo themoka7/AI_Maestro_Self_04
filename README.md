@@ -35,7 +35,7 @@
 | 파일 열기 | 가능 (열면서 사용 횟수 +1) | **불가** — 경로 복사·내려받기만 |
 | 의존성 | 4개 (`blake3` `serde` `serde_json` `walkdir`) | **0개** |
 
-- **웹 데모** — https://themoka7.github.io/AI_Maestro_Self_03/ (Chrome·Edge)
+- **웹 데모** — https://themoka7.github.io/AI_Maestro_Self_04/ (Chrome·Edge)
 - **실행 파일** — `Actions` → `CI` → 최신 실행의 `mfind-windows-x64` 아티팩트
 
 ```
@@ -188,7 +188,7 @@ zoxide 나 Firefox 의 frecency 와 같은 발상이다. 튜닝 지점이 반감
 
 ### 웹 — 설치 없음
 
-https://themoka7.github.io/AI_Maestro_Self_03/ 을 Chrome 이나 Edge 로 열고
+https://themoka7.github.io/AI_Maestro_Self_04/ 을 Chrome 이나 Edge 로 열고
 **① 폴더 선택** 을 누른다. `문서` 나 `사진` 폴더로 시작하는 것을 권한다.
 
 ```sh
