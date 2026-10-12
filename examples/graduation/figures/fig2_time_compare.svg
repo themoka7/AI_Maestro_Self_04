@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" font-family="Malgun Gothic, NanumGothic, sans-serif">
+  <defs>
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="8" height="8" fill="#FFFFFF"/>
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#9A8FB8" stroke-width="1.5"/>
+    </pattern>
+  </defs>
+  <rect width="1000" height="400" fill="#F4F2F8"/>
+  <text x="30" y="38" font-size="21" font-weight="bold" fill="#222">오전 행사 소요 시간 — 현행 110′ vs 개선 77′</text>
+  <text x="30" y="62" font-size="13.5" fill="#222">경암체육관 식전행사 + 본식 누적(본식만 보면 90′→67′). 줄어드는 시간의 대부분은 학위수여(60′→40′)에서 나온다.</text>
+
+  <!-- scale: x0=150, 7px per minute -->
+  <!-- 현행 -->
+  <text x="30" y="137" font-size="16" font-weight="bold" fill="#222">현행</text>
+  <text x="30" y="157" font-size="12" fill="#222">09:40-11:30</text>
+  <rect x="150" y="115" width="140" height="52" fill="url(#hatch)" stroke="#9A8FB8" stroke-width="1"/>
+  <rect x="290" y="115" width="210" height="52" fill="#9A8FB8"/>
+  <rect x="500" y="115" width="420" height="52" fill="#3B2A6B"/>
+  <g font-size="14" text-anchor="middle">
+    <rect x="187" y="130" width="66" height="22" fill="#FFFFFF"/><text x="220" y="146" fill="#222">식전 20′</text>
+    <text x="395" y="146" fill="#222">본식 순서 30′</text>
+    <text x="710" y="146" fill="#FFFFFF" font-weight="bold">학위수여 60′</text>
+  </g>
+  <text x="930" y="148" font-size="19" font-weight="bold" fill="#222">110′</text>
+
+  <!-- 개선 -->
+  <text x="30" y="247" font-size="16" font-weight="bold" fill="#3B2A6B">개선</text>
+  <text x="30" y="267" font-size="12" fill="#222">09:40-10:57</text>
+  <rect x="150" y="225" width="70" height="52" fill="url(#hatch)" stroke="#9A8FB8" stroke-width="1"/>
+  <rect x="220" y="225" width="189" height="52" fill="#9A8FB8"/>
+  <rect x="409" y="225" width="280" height="52" fill="#3B2A6B"/>
+  <g font-size="14" text-anchor="middle">
+    <rect x="153" y="240" width="64" height="22" fill="#FFFFFF"/><text x="185" y="256" font-size="13" fill="#222">식전 10′</text>
+    <text x="314.5" y="256" fill="#222">본식 순서 27′</text>
+    <text x="549" y="256" fill="#FFFFFF" font-weight="bold">학위수여 40′ ※</text>
+  </g>
+  <text x="699" y="258" font-size="19" font-weight="bold" fill="#3B2A6B">77′</text>
+
+  <!-- saved region -->
+  <rect x="689" y="225" width="231" height="52" fill="none" stroke="#3B2A6B" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="845" y="256" font-size="15" font-weight="bold" fill="#3B2A6B" text-anchor="middle">33′ 단축 (30%)</text>
+
+  <!-- connector lines for 학위수여 -->
+  <g stroke="#3B2A6B" stroke-width="1" stroke-dasharray="3 3">
+    <line x1="500" y1="167" x2="409" y2="225"/>
+    <line x1="920" y1="167" x2="689" y2="225"/>
+  </g>
+
+  <!-- breakdown notes -->
+  <g font-size="13" fill="#222">
+    <text x="150" y="310">· 식전 20′→10′: 홍보 동영상은 입장 시간(09:00-09:40) 반복 상영으로 대체</text>
+    <text x="150" y="331">· 본식 순서 30′→27′: 학사보고 1′ 삭제(전광판 자막·식순지), 축사 5′→3′</text>
+    <text x="150" y="352">· 학위수여 60′→40′: 박사 전원 개별 호명·총장 수여 유지, 이름 카드 연속 호명으로 대기 시간 단축</text>
+  </g>
+  <text x="30" y="384" font-size="11.5" fill="#222">※ 추정치. 박사 약 211명(2023 전기) 기준 1인 약 17초 → 약 11초. 박사 학위자 수에 따라 30~45′. 본식 순서 = 개식·국민의례·학사보고·식사·축사·답사·축하연주·교가·폐식</text>
+</svg>

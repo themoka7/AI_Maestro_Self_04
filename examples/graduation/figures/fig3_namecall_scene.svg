@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" font-family="Malgun Gothic, NanumGothic, sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 z" fill="#3B2A6B"/>
+    </marker>
+    <marker id="arr2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0 L10 5 L0 10 z" fill="#9A8FB8"/>
+    </marker>
+  </defs>
+  <rect width="1000" height="680" fill="#F4F2F8"/>
+  <text x="30" y="38" font-size="21" font-weight="bold" fill="#222">단과대학별 네임콜 수여식 — 한 사람이 이름을 듣고 사진을 남기기까지</text>
+  <text x="30" y="62" font-size="13.5" fill="#222">각 단과대학 강당, 13:30-15:30 중 회당 50′ 내외. 위에서 내려다본 개념도.</text>
+
+  <!-- hall -->
+  <rect x="30" y="85" width="580" height="420" rx="6" fill="#FFFFFF" stroke="#9A8FB8" stroke-width="1.5"/>
+
+  <!-- stage -->
+  <rect x="160" y="100" width="300" height="70" rx="4" fill="#9A8FB8"/>
+  <text x="310" y="118" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">단상</text>
+  <!-- stairs -->
+  <g fill="#FFFFFF" stroke="#9A8FB8" stroke-width="1">
+    <rect x="136" y="120" width="24" height="36"/><rect x="460" y="120" width="24" height="36"/>
+  </g>
+  <g stroke="#9A8FB8" stroke-width="1">
+    <line x1="142" y1="120" x2="142" y2="156"/><line x1="148" y1="120" x2="148" y2="156"/><line x1="154" y1="120" x2="154" y2="156"/>
+    <line x1="466" y1="120" x2="466" y2="156"/><line x1="472" y1="120" x2="472" y2="156"/><line x1="478" y1="120" x2="478" y2="156"/>
+  </g>
+  <!-- dean -->
+  <circle cx="330" cy="138" r="13" fill="#3B2A6B"/>
+  <text x="330" y="162" font-size="12" fill="#222" text-anchor="middle">학장</text>
+
+  <!-- MC lectern on floor, stage-left -->
+  <rect x="50" y="100" width="64" height="30" rx="3" fill="#3B2A6B"/>
+  <text x="82" y="120" font-size="12.5" fill="#FFFFFF" text-anchor="middle">사회자</text>
+
+  <!-- photo zone -->
+  <rect x="500" y="185" width="95" height="90" rx="4" fill="#FFFFFF" stroke="#3B2A6B" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="547" y="222" font-size="13" font-weight="bold" fill="#3B2A6B" text-anchor="middle">사진 구역</text>
+  <text x="547" y="240" font-size="11.5" fill="#222" text-anchor="middle">(단상 아래)</text>
+
+  <!-- graduate seats -->
+  <g fill="#9A8FB8">
+    <rect x="170" y="230" width="280" height="10" rx="2"/><rect x="170" y="250" width="280" height="10" rx="2"/>
+    <rect x="170" y="270" width="280" height="10" rx="2"/><rect x="170" y="290" width="280" height="10" rx="2"/>
+    <rect x="170" y="310" width="280" height="10" rx="2"/>
+  </g>
+  <text x="310" y="342" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">졸업생석 (학사·석사 사전 신청자)</text>
+
+  <!-- family seats -->
+  <g fill="#FFFFFF" stroke="#9A8FB8" stroke-width="1">
+    <rect x="130" y="390" width="360" height="10" rx="2"/><rect x="130" y="410" width="360" height="10" rx="2"/>
+    <rect x="130" y="430" width="360" height="10" rx="2"/><rect x="130" y="450" width="360" height="10" rx="2"/>
+  </g>
+  <text x="310" y="485" font-size="13" font-weight="bold" fill="#222" text-anchor="middle">가족석</text>
+
+  <!-- graduate path -->
+  <path d="M170 275 L 100 275 L 100 160" fill="none" stroke="#3B2A6B" stroke-width="2.5" marker-end="url(#arr)"/>
+  <path d="M100 150 L 100 138 L 132 138" fill="none" stroke="#3B2A6B" stroke-width="2.5" marker-end="url(#arr)"/>
+  <path d="M165 145 L 312 145" fill="none" stroke="#3B2A6B" stroke-width="2.5" marker-end="url(#arr)"/>
+  <path d="M348 145 L 482 145 L 520 182" fill="none" stroke="#3B2A6B" stroke-width="2.5" marker-end="url(#arr)"/>
+  <!-- family path -->
+  <path d="M490 420 L 547 420 L 547 280" fill="none" stroke="#9A8FB8" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#arr2)"/>
+  <text x="555" y="360" font-size="11.5" fill="#222">가족</text>
+  <text x="555" y="375" font-size="11.5" fill="#222">이동</text>
+
+  <!-- step badges on plan -->
+  <g font-size="13" font-weight="bold" text-anchor="middle">
+    <circle cx="72" cy="200" r="13" fill="#3B2A6B"/><text x="72" y="205" fill="#FFFFFF">1</text>
+    <circle cx="82" cy="78" r="0" fill="none"/>
+    <circle cx="128" cy="113" r="0" fill="none"/>
+    <circle cx="50" cy="150" r="13" fill="#3B2A6B"/><text x="50" y="155" fill="#FFFFFF">2</text>
+    <circle cx="240" cy="190" r="13" fill="#3B2A6B"/><text x="240" y="195" fill="#FFFFFF">3</text>
+    <circle cx="365" cy="190" r="13" fill="#3B2A6B"/><text x="365" y="195" fill="#FFFFFF">4</text>
+    <circle cx="590" cy="300" r="13" fill="#3B2A6B"/><text x="590" y="305" fill="#FFFFFF">5</text>
+  </g>
+  <line x1="240" y1="177" x2="240" y2="149" stroke="#3B2A6B" stroke-width="1"/>
+  <line x1="365" y1="177" x2="350" y2="150" stroke="#3B2A6B" stroke-width="1"/>
+
+  <!-- right panel: steps -->
+  <text x="640" y="110" font-size="15" font-weight="bold" fill="#222">진행 순서 (1인 약 8초 호명 기준)</text>
+  <g font-size="13.5" fill="#222">
+    <circle cx="654" cy="145" r="12" fill="#3B2A6B"/><text x="654" y="150" fill="#FFFFFF" font-weight="bold" text-anchor="middle">1</text>
+    <text x="676" y="150">이름 카드 제출</text>
+    <text x="676" y="169" font-size="12">발음 표기 포함, 사회자에게 전달</text>
+
+    <circle cx="654" cy="205" r="12" fill="#3B2A6B"/><text x="654" y="210" fill="#FFFFFF" font-weight="bold" text-anchor="middle">2</text>
+    <text x="676" y="210">사회자(교직원·학생) 호명</text>
+
+    <circle cx="654" cy="250" r="12" fill="#3B2A6B"/><text x="654" y="255" fill="#FFFFFF" font-weight="bold" text-anchor="middle">3</text>
+    <text x="676" y="255">단상 이동</text>
+
+    <circle cx="654" cy="295" r="12" fill="#3B2A6B"/><text x="654" y="300" fill="#FFFFFF" font-weight="bold" text-anchor="middle">4</text>
+    <text x="676" y="300">학장이 학위기 전달</text>
+    <text x="676" y="319" font-size="12">학장 일정이 겹치면 부학장·학과장이 대리 수여</text>
+
+    <circle cx="654" cy="355" r="12" fill="#3B2A6B"/><text x="654" y="360" fill="#FFFFFF" font-weight="bold" text-anchor="middle">5</text>
+    <text x="676" y="360">단상 아래 사진 구역에서 가족 촬영</text>
+  </g>
+  <g font-size="12" fill="#222">
+    <text x="640" y="410">운영: 단과대학 행정실(장소·학위기)</text>
+    <text x="640" y="428">+ 단과대 학생회(사전 신청·이름 카드·포토존)</text>
+    <text x="640" y="455">인원 300명 초과 단과대학은 학부(과)별 2회차</text>
+    <text x="640" y="473">(13:30 / 14:30 시작)</text>
+  </g>
+
+  <!-- program strip: 40 min -> 940px, 23.5 px/min -->
+  <text x="30" y="545" font-size="15" font-weight="bold" fill="#222">식순 (회당 50′ 내외 ※)</text>
+  <g>
+    <rect x="30" y="558" width="56.4" height="36" fill="#9A8FB8"/>
+    <rect x="86.4" y="558" width="752" height="36" fill="#3B2A6B"/>
+    <rect x="838.4" y="558" width="56.4" height="36" fill="#9A8FB8"/>
+    <rect x="894.8" y="558" width="75.2" height="36" fill="#FFFFFF" stroke="#9A8FB8" stroke-width="1.5"/>
+  </g>
+  <g font-size="13" text-anchor="middle">
+    <text x="58" y="581" fill="#222">3′</text>
+    <text x="462" y="581" fill="#FFFFFF" font-weight="bold">호명 수여 40′ 내외 (1인 약 8초)</text>
+    <text x="866.6" y="581" fill="#222">3′</text>
+    <text x="932.4" y="581" fill="#222">4′</text>
+  </g>
+  <g font-size="12.5" fill="#222" text-anchor="middle">
+    <text x="62" y="614">학장 인사</text>
+    <text x="855" y="614">학과 대표 한마디</text>
+    <text x="932.4" y="632">단체 사진</text>
+  </g>
+  <text x="30" y="664" font-size="11.5" fill="#222">※ 추정치. 학사·석사 약 4,300명 ÷ 단과대학 약 15개(가정) ≈ 평균 약 290명, 1인 약 8초 호명 기준.</text>
+  <text x="970" y="664" font-size="11.5" fill="#222" text-anchor="end">개념도(축척 없음)</text>
+</svg>
