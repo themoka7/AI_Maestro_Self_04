@@ -79,6 +79,29 @@ def is_short(text):
     return len(str(text)) <= 12
 
 
+TEXT_WIDTH_CM = 17.0
+
+
+def auto_widths(cols, rows):
+    """열 너비를 내용 길이에 비례해 나눈다. 긴 설명 열이 짧은 숫자 열에 눌리지 않게."""
+    def need(i):
+        lens = [len(str(c)) for c in [cols[i]] + [r[i] for r in rows if i < len(r)]]
+        return min(max(max(lens), 4), 40)
+    raw = [need(i) for i in range(len(cols))]
+    return [TEXT_WIDTH_CM * w / sum(raw) for w in raw]
+
+
+def set_widths(t, widths):
+    # Word 는 셀 너비를, LibreOffice 는 tblGrid 를 본다. 둘 다 맞춘다.
+    t.autofit = False
+    grid = t._tbl.tblGrid
+    for i, gc in enumerate(grid.findall(qn("w:gridCol"))):
+        gc.set(qn("w:w"), str(int(widths[i] * 567)))
+    for row in t.rows:
+        for i, cell in enumerate(row.cells):
+            cell.width = Cm(widths[min(i, len(widths) - 1)])
+
+
 def table(doc, b):
     cols = b["columns"]
     rows = list(b["rows"])
@@ -108,10 +131,7 @@ def table(doc, b):
                     p._element.getparent().remove(p._element)
             else:
                 start = i
-    if b.get("widths"):
-        for row in t.rows:
-            for i, w in enumerate(b["widths"]):
-                row.cells[i].width = Cm(w)
+    set_widths(t, b.get("widths") or auto_widths(cols, rows))
     doc.add_paragraph().paragraph_format.space_after = Pt(2)
 
 
@@ -124,6 +144,7 @@ def block(doc, b, base):
     elif kind == "subheading":
         p = doc.add_paragraph()
         spacing(p, 8, 3)
+        p.paragraph_format.keep_with_next = True  # 소제목이 쪽 끝에 홀로 남지 않게
         add_rich(p, b["text"], 11, True)
     elif kind == "bullets":
         for item in b["items"]:
@@ -142,6 +163,7 @@ def block(doc, b, base):
         c = t.rows[0].cells[0]
         write_cell(c, b["text"], size=10.5)
         shade(c, TOTAL_FILL)
+        set_widths(t, [TEXT_WIDTH_CM])
         doc.add_paragraph().paragraph_format.space_after = Pt(2)
     elif kind == "table":
         table(doc, b)
@@ -149,6 +171,7 @@ def block(doc, b, base):
         p = doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         spacing(p, 4, 0)
+        p.paragraph_format.keep_with_next = True
         p.add_run().add_picture(str(base / b["path"]), width=Cm(b.get("width_cm", 16)))
         cap = doc.add_paragraph()
         cap.alignment = WD_ALIGN_PARAGRAPH.CENTER
@@ -188,6 +211,7 @@ def build(src, out):
     for s in data["sections"]:
         h = doc.add_paragraph()
         spacing(h, 12, 6)
+        h.paragraph_format.keep_with_next = True
         par_border(h, sz=6, color="9A8FB8")
         add_rich(h, s["heading"], 13, True, ACCENT)
         for b in s["blocks"]:

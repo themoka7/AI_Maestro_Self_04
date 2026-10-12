@@ -17,6 +17,8 @@ def main(docx):
     subprocess.run([soffice, "--headless", "--convert-to", "pdf", "--outdir",
                     str(docx.parent), str(docx)], check=True, capture_output=True)
     pdf = docx.with_suffix(".pdf")
+    for old in docx.parent.glob(docx.stem + "-*.png"):  # 쪽 수가 줄면 옛 PNG 가 남는다
+        old.unlink()
     if shutil.which("pdftoppm"):
         subprocess.run(["pdftoppm", "-png", "-r", "80", str(pdf),
                         str(docx.with_suffix(""))], check=True)

@@ -54,8 +54,14 @@ def render(src, out, scale=2):
         page.write_text(html, encoding="utf-8")
         subprocess.run([browser, "--headless=new", "--no-sandbox", "--disable-gpu",
                         "--hide-scrollbars", f"--force-device-scale-factor={scale}",
-                        f"--window-size={w},{h}", f"--screenshot={Path(out).resolve()}",
+                        # 헤드리스 창은 아래쪽 일부를 잘라 먹으므로 넉넉히 띄우고 잘라낸다
+                        f"--window-size={w},{h + 200}", f"--screenshot={Path(out).resolve()}",
                         page.as_uri()], check=True, capture_output=True)
+    try:
+        from PIL import Image
+        Image.open(out).crop((0, 0, w * scale, h * scale)).save(out)
+    except ImportError:
+        print("Pillow 가 없어 하단 여백이 남는다", file=sys.stderr)
 
 
 if __name__ == "__main__":
